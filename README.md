@@ -1,1 +1,2 @@
-This project is a part of my education on Codecademy
+Privacy Policy
+Delete your Account
