@@ -3,24 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy</title>
+    <title>Privacy Policy - Brain Dump</title>
     <style>
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
-            line-height: 1.6; 
-            padding: 20px; 
-            max-width: 800px; 
-            margin: auto; 
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
             color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
         }
-        h1, h2 { color: #000; }
-        ul { padding-left: 20px; }
-        .contact { margin-top: 20px; }
+        h1 {
+            font-size: 28px;
+            color: #111;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 40px;
+            display: block;
+        }
+        h2 {
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #111;
+            font-weight: 600;
+        }
+        h3 {
+            font-size: 16px;
+            margin-top: 20px;
+            color: #444;
+            font-weight: 600;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul {
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        strong {
+            color: #000;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #121212;
+                color: #e0e0e0;
+            }
+            h1, h2, strong {
+                color: #ffffff;
+            }
+            h3 {
+                color: #cccccc;
+            }
+            .subtitle {
+                color: #aaaaaa;
+            }
+            a {
+                color: #4d94ff;
+            }
+        }
     </style>
 </head>
 <body>
+
     <h1>Privacy Policy for Brain Dump</h1>
-    <p><strong>Effective Date:</strong> October 26, 2025</p>
+    <span class="subtitle">Effective Date: January 13, 2026</span>
 
     <p>
         aevaksnes ("us", "we", or "our") operates the Brain Dump mobile application (the "Service").
@@ -35,7 +97,7 @@
     <h3>A. Data You Provide Directly</h3>
     <ul>
         <li>
-            <strong>User Content:</strong> We collect and store the prompts you create, save, and manage within the app. This is the core function of the app. This data is stored in your own secure user-specific collection in our database.
+            <strong>User Content:</strong> We collect and store the data you explicitly choose to save. This includes custom prompt lists you create and journal entries (dumps) you save to your history. This data is encrypted and stored in your own secure user-specific collection in our database.
         </li>
     </ul>
 
@@ -43,10 +105,10 @@
     <p>When you use our Service, we use Firebase (a Google service) which may collect the following information:</p>
     <ul>
         <li>
-            <strong>Authentication Data:</strong> When you sign in using your Google Account, we receive your name, email address, and a unique User ID (UID) from Google. We use this to create your account, secure your data, and identify you as a unique user.
+            <strong>Authentication Data:</strong> When you sign in (using Google Sign-In or Email/Password), we store your email address and a unique User ID (UID). If you use Email/Password, your password is heavily encrypted by Google Firebase; we never see your actual password.
         </li>
         <li>
-            <strong>Analytics Data:</strong> We use Firebase Analytics to understand how our users interact with the Service. This helps us fix bugs and improve the app. This data is anonymized and may include your device type, operating system, and in-app events (like which screens you visit or buttons you tap).
+            <strong>Analytics Data:</strong> We use Firebase Analytics to understand how our users interact with the Service. This helps us fix bugs and improve the app. This data is anonymized and may include your device type, operating system, and in-app events.
         </li>
         <li>
             <strong>Crash & Performance Data:</strong> We use Firebase Crashlytics to identify and fix app crashes. If the app crashes, it may send a report including device information, OS version, and the state of the app at the time of the crash.
@@ -56,8 +118,8 @@
     <h2>2. How We Use Your Data</h2>
     <p>We use the collected data for the following purposes:</p>
     <ul>
-        <li>To provide and maintain the Service (i.e., to save and retrieve your prompts).</li>
-        <li>To authenticate you and secure your account.</li>
+        <li>To provide and maintain the Service (i.e., to save and retrieve your journal entries and prompts).</li>
+        <li>To authenticate you and secure your account so only you can access your private thoughts.</li>
         <li>To identify and fix app crashes and bugs.</li>
         <li>To analyze app usage so we can improve the user experience.</li>
     </ul>
@@ -67,12 +129,12 @@
         We do not sell, trade, or rent your personal information to any third party for marketing purposes.
     </p>
     <p>
-        Our only third-party service provider is **Google (Firebase)**. We share data with them only to operate the Service. For example:
+        Our only third-party service provider is <strong>Google (Firebase)</strong>. We share data with them only to operate the Service. For example:
     </p>
     <ul>
-        <li>Your **authentication data** is managed by Firebase Authentication.</li>
-        <li>Your **prompts** are stored on Google's Firestore database.</li>
-        <li>Your **analytics and crash data** is collected by Firebase.</li>
+        <li>Your <strong>authentication data</strong> is managed by Firebase Authentication.</li>
+        <li>Your <strong>saved content</strong> is stored on Google's Cloud Firestore database.</li>
+        <li>Your <strong>analytics and crash data</strong> is collected by Firebase.</li>
     </ul>
     <p>
         This data is processed by Google on our behalf. You can review <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy here</a>.
@@ -80,26 +142,26 @@
 
     <h2>4. Data Security</h2>
     <p>
-        The security of your data is critical. We rely on Firebase's robust security measures to protect your information. We have also configured our database (Firestore) with security rules to ensure that **only you can access, read, or write your own data**.
-    </l>
+        The security of your data is critical. We rely on Firebase's robust security measures to protect your information. We have also configured our database (Cloud Firestore) with strict security rules to ensure that <strong>only you can access, read, or write your own data</strong>.
+    </p>
 
     <h2>5. Your Data Rights & Deletion</h2>
     <p>
-        You have full control over your data. You can delete individual prompts from within the app at any time.
+        You have full control over your data. You can delete individual journal entries or prompt lists from within the app at any time.
     </p>
     <p>
-        To comply with Google Play policies, we provide two ways to permanently delete your account and all associated data (including all of your saved prompts):
+        To comply with Google Play policies, we provide two ways to permanently delete your account and all associated data:
     </p>
     <ul>
         <li>
-            <strong>1. From Within the App:</strong> You can permanently delete your account by navigating to the "Settings" page inside the app and selecting the "Delete Account" option.
+            <strong>1. From Within the App:</strong> You can permanently delete your account by navigating to the "Settings" page inside the app and selecting the "Delete Account" option. This happens immediately.
         </li>
         <li>
-            <strong>2. Via Our Web Request Form:</strong> You can also request account deletion by visiting our account deletion webpage at https://aevaksnes.github.io/braindump_deletion.html or by emailing us directly at aevaksnes@gmail.com.
+            <strong>2. Via Email Request:</strong> If you cannot access the app, you can request account deletion by emailing us directly at <a href="mailto:developing.aevaksnes@gmail.com">developing.aevaksnes@gmail.com</a>. We will process your request within 7 days.
         </li>
     </ul>
     <p>
-        Please note that account deletion is permanent and cannot be reversed. We will delete all data associated with your account, such as your user profile and all saved prompts.
+        Please note that account deletion is permanent and cannot be reversed. We will delete all data associated with your account, including your saved history.
     </p>
 
     <h2>6. Children's Privacy</h2>
@@ -110,15 +172,19 @@
     <h2>7. Changes to This Privacy Policy</h2>
     <p>
         We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
-    </l>
+    </p>
 
     <h2>Contact Us</h2>
     <p class="contact">
         If you have any questions about this Privacy Policy, you can contact us:
     </p>
     <ul>
-        <li>By email: developing.aevaksnes@gmail.com</li>
-        <li>By visiting this page on our website: https://aevaksnes.github.io/braindump_privacy.html</li>
+        <li>By email: <a href="mailto:developing.aevaksnes@gmail.com">developing.aevaksnes@gmail.com</a></li>
     </ul>
+    
+    <br>
+    <hr style="border: 0; border-top: 1px solid #ccc; margin: 40px 0;">
+    <p style="font-size: 12px; color: #888; text-align: center;">&copy; 2026 Brain Dump / aevaksnes. All rights reserved.</p>
+
 </body>
 </html>
