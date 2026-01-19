@@ -39,7 +39,8 @@
         .app-item {
             display: flex;
             gap: 16px;
-            align-items: flex-start;
+            /* center image vertically with the meta text */
+            align-items: center;
             margin-bottom: 18px;
         }
         .app-item img {
@@ -63,6 +64,24 @@
             text-decoration: none;
         }
         .app-links a:hover { text-decoration: underline; }
+
+        /* Responsive: stack image on top on small screens */
+        @media (max-width: 700px) {
+            .app-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center; /* center text when stacked for nicer layout */
+            }
+            .app-item img {
+                /* make image use full width but keep some breathing room */
+                max-width: 100%;
+                width: 100%;
+                height: auto;
+            }
+            .app-item .meta {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
