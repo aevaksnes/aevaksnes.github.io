@@ -1,10 +1,12 @@
+import withExportOptimizeImages from 'next-export-optimize-images'
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'export', // To enable static export for GitHub Pages
   images: {
-    unoptimized: true, // GitHub Pages does not support dynamic image optimization, so we disable it
+    loader: 'custom', // We will do the loading ourselves
+    loaderFile: './app/image-loader.ts', // ...use this file
   },
 };
 
-export default nextConfig;
+export default withExportOptimizeImages(nextConfig)
