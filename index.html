@@ -1,166 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aevaksnes</title>
+    <title>Velkommen | aevaksnes</title>
     <style>
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
-            line-height: 1.6; 
-            padding: 20px; 
-            max-width: 1000px; 
-            margin: auto; 
-            color: #333;
+        :root {
+            --bg: #0a0a0a;
+            --card-bg: #161616;
+            --text: #ededed;
+            --accent: #008080;
+            --border: rgba(255, 255, 255, 0.1);
         }
-        h1, h2 { color: #000; }
-        ul { padding-left: 20px; list-style: none; }
-        .contact { margin-top: 20px; }
-        .profile {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .profile img {
-            width: 120px;
-            height: 120px;
-            object-fit: cover;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-        }
-        .links a {
-            color: #0366d6;
-            text-decoration: none;
-        }
-        .links a:hover { text-decoration: underline; }
 
-        .apps { margin-top: 10px; }
-        .app-item {
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             display: flex;
-            gap: 16px;
-            /* center image vertically with the meta text */
             align-items: center;
-            margin-bottom: 18px;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
         }
-        .app-item img {
-            width: 220px;
-            max-width: 40%;
-            height: auto;
-            object-fit: cover;
-            border-radius: 6px;
-            border: 1px solid #ddd;
-        }
-        .app-item .meta {
-            flex: 1;
-        }
-        .app-links {
-            margin-top: 8px;
-            font-size: 0.95rem;
-        }
-        .app-links a {
-            margin-right: 12px;
-            color: #0366d6;
-            text-decoration: none;
-        }
-        .app-links a:hover { text-decoration: underline; }
 
-        /* Responsive: stack image on top on small screens */
-        @media (max-width: 700px) {
-            .app-item {
-                flex-direction: column;
-                align-items: center;
-                text-align: center; /* center text when stacked for nicer layout */
-            }
-            .app-item img {
-                /* make image use full width but keep some breathing room */
-                max-width: 100%;
-                width: 100%;
-                height: auto;
-            }
-            .app-item .meta {
-                width: 100%;
-            }
+        .container {
+            text-align: center;
+            padding: 2rem;
+            max-width: 400px;
+            width: 90%;
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            background: var(--card-bg);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+        
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #ff7f24;
+        }
+
+        p {
+            color: #a0a0a0;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--text);
+            color: var(--bg);
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            background-color: var(--accent);
+            color: #000;
+        }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #444;
+            font-family: monospace;
         }
     </style>
 </head>
+
 <body>
-    <h1>My Apps</h1>
-    <p><strong>Effective Date:</strong> January 19, 2026</p>
 
-    <div class="profile">
-        <!-- Profile image: placed at assets/profile.jpg -->
-        <img src="assets/aks.jpg" alt="Profile image of aevaksnes">
-        <div>
-            <p>Hi — I'm aevaksnes. Welcome to my site. Below are a few of my projects and ways to reach me.</p>
-            <p class="links">
-                <a href="https://github.com/aevaksnes" target="_blank" rel="noopener noreferrer">GitHub</a> ·
-                <a href="mailto:developing.aevaksnes@gmail.com">Email</a>
-            </p>
+    <div class="container">
+        <img src="assets/logo.png" alt="Logo" width="64" height="64">
+
+        <h1>aevaksnes</h1>
+        <p>Welcome. I have made a designated webpage to present my programming projects. Do you want to check it out?
+            It's on Vercel.</p>
+
+        <a href="https://aevaksnes.vercel.app/" class="btn">Explore My Projects</a>
+
+        <div class="footer">
+            HOSTED ON VERCEL 2.0
         </div>
     </div>
 
-    <h2>Selected Apps</h2>
-    <div class="apps">
-        <!-- Brain Dump is the first app. Banner image placed at assets/braindump_banner.jpg -->
-        <div class="app-item" id="braindump">
-            <img src="assets/braindump_social_text.png" alt="Brain Dump screenshot/banner">
-            <div class="meta">
-                <h3>Brain Dump</h3>
-                <p>An app to dump your thoughts.</p>
-                <p class="app-links">
-                    <a href="https://aevaksnes.github.io/braindump_terms.html" target="_blank" rel="noopener noreferrer">Terms of Service</a>
-                    <a href="https://aevaksnes.github.io/braindump_privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-                    <a href="https://aevaksnes.github.io/braindump_deletion.html" target="_blank" rel="noopener noreferrer">Delete your account</a>
-                    <a href="https://aevaksnes-braindump.web.app" target="_blank" rel="noopener noreferrer">Open Brain Dump</a>
-                </p>
-            </div>
-            <!-- Downloads area for Brain Dump JSON files -->
-                <div class="downloads" aria-live="polite">
-                    <h4>Downloadable Prompts</h4>
-                    <ul id="braindump-downloads">
-                        <!-- Direct download link for the file named exactly "PM Reflections.json" -->
-                        <li><a href="assets/PM%20Reflections.json" download>PM Reflections.json</a></li>
-                        <li><a href="assets/AM%20Reflections.json" download>AM Reflections.json</a></li>
-                        <li><a href="assets/Proof.json" download>Proof.json</a></li>
-                        <li><a href="assets/Make%20a%20new%20emotional%20home.json" download>Make a new emotional home.json</a></li>
-                        <li><a href="assets/Self-Audit.json" download>Self-Audit.json</a></li>
-                        <li><a href="assets/Vacation holiday.json" download>Vacation/holiday.json</a></li>
-                        <li><a href="assets/Maintaining%20results%20and%20feeling%20safe%20in%20freedom.json" download>Maintaining results and feeling safe in freedom.json</a></li>
-                    </ul>
-                </div>
-        </div>
-
-        <!-- Other apps -->
-        <div class="app-item" id="shared_kitchen">
-            <img src="assets/Shared_Kitchen_Social_Text.png" alt="Shared Kitchen screenshot/banner">
-            <div class="meta">
-                <h3>Shared Kitchen</h3>
-                <p>A recipe sharing app. Make your kitchen and share with friends.</p>
-                <p class="app-links">
-                    <a href="https://aevaksnes.github.io/shared_kitchen_terms.html" target="_blank" rel="noopener noreferrer">Terms of Service</a>
-                    <a href="https://aevaksnes.github.io/shared_kitchen_privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-                    <a href="https://aevaksnes.github.io/shared_kitchen_deletion.html" target="_blank" rel="noopener noreferrer">Delete your account</a>
-                    <a href="https://aevaksnes-shared-kitchen.web.app" target="_blank" rel="noopener noreferrer">Open Shared Kitchen</a>
-                </p>
-            </div>
-        </div>
-
-        <div class="app-item" id="what_I_eat">
-            <img src="assets/what_I_eat_social.png" alt="App Three preview (placeholder)">
-            <div class="meta">
-                <h3>what_I_eat</h3>
-                <p>Food photo log.</p>
-                <p class="app-links">
-                    <a href="https://example.com/app3" target="_blank" rel="noopener noreferrer">Open App Three</a>
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <div class="contact">
-        <h2>Contact</h2>
-        <p>If you'd like to get in touch, email me at <a href="mailto:developing.aevaksnes@gmail.com">developing.aevaksnes@gmail.com</a>.</p>
-    </div>
 </body>
+
 </html>
